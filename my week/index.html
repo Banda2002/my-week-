@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My ERP Learning Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">E</div><div><b>ERP HUB</b><small>Personal Dashboard</small></div></div>
+    <nav>
+      <button class="nav-link active" data-section="dashboard">⌂ <span>الرئيسية</span></button>
+      <button class="nav-link" data-section="schedule">▦ <span>الجدول</span></button>
+      <button class="nav-link" data-section="roadmap">⌁ <span>مسار ERP</span></button>
+      <button class="nav-link" data-section="tasks">✓ <span>المهام</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <button id="themeBtn" class="theme-btn">☼ <span>الوضع الفاتح</span></button>
+      <div class="quote">"الاستمرارية أهم من الحماس."</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MY PERSONAL PLAN</p>
+        <h1>أهلاً بيك 👋</h1>
+        <p class="muted">خطة متوازنة لتعلم ERP / BOS + English + Fitness</p>
+      </div>
+      <div class="date-box"><span>اليوم</span><b id="todayText">—</b></div>
+    </header>
+
+    <section id="dashboard" class="page-section">
+      <div class="hero">
+        <div>
+          <span class="pill">🎯 الهدف الرئيسي</span>
+          <h2>ERP System Developer</h2>
+          <p>اتعلم البرمجة، قواعد البيانات، الـ Backend، وبعدها ابنِ ERP حقيقي بإيدك.</p>
+          <button class="primary" data-go="roadmap">ابدأ الـ Roadmap →</button>
+        </div>
+        <div class="hero-progress"><div class="ring"><strong id="overallProgress">0%</strong><span>التقدم</span></div></div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span class="stat-icon blue">💻</span><div><small>ERP / BOS</small><b>2 يوم / أسبوع</b></div></div>
+        <div class="stat"><span class="stat-icon purple">🇬🇧</span><div><small>English</small><b>2 يوم / أسبوع</b></div></div>
+        <div class="stat"><span class="stat-icon green">🏋️</span><div><small>Gym</small><b>2 يوم / أسبوع</b></div></div>
+        <div class="stat"><span class="stat-icon orange">⏱</span><div><small>ساعات الخطة</small><b id="weeklyHours">11 ساعة</b></div></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <div class="panel-head"><div><span class="eyebrow">THIS WEEK</span><h3>جدول الأسبوع</h3></div><button class="ghost" data-go="schedule">عرض الكل</button></div>
+          <div id="miniSchedule" class="mini-schedule"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div><span class="eyebrow">TO-DO</span><h3>مهامك القادمة</h3></div><button class="ghost" data-go="tasks">إدارة</button></div>
+          <div id="miniTasks"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="page-section hidden">
+      <div class="section-head"><div><span class="eyebrow">WEEKLY SCHEDULE</span><h2>الجدول الأسبوعي</h2></div><div class="work-badge">🏢 الشغل <b>السبت → الخميس حتى 6 م</b></div></div>
+      <div id="fullSchedule" class="schedule-grid"></div>
+    </section>
+
+    <section id="roadmap" class="page-section hidden">
+      <div class="section-head"><div><span class="eyebrow">ERP ROADMAP</span><h2>مسار تعلم الـ ERP</h2><p class="muted">اضغط على المرحلة لتحديدها كمرحلتك الحالية.</p></div></div>
+      <div id="roadmapGrid" class="roadmap-grid"></div>
+    </section>
+
+    <section id="tasks" class="page-section hidden">
+      <div class="section-head"><div><span class="eyebrow">TASK MANAGER</span><h2>المهام</h2></div><button id="addTask" class="primary">+ إضافة مهمة</button></div>
+      <div class="panel"><div id="taskList" class="task-list"></div></div>
+    </section>
+
+    <footer>ERP HUB • Build your skills. Build your future.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
